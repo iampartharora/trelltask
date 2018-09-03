@@ -1,0 +1,14 @@
+API's:
+
+Request:
+/user/read/:userId
+
+Method: GET
+
+Sample Request:
+localhost:7777/user/read/1
+
+Sample Response:
+
+
+

@@ -1,0 +1,68 @@
+API Documentation
+
+1. Get User Details
+Request:
+/user/read/:userHandle
+
+Method: GET
+
+Sample Request:
+localhost:7777/user/read/partharora24
+
+Sample Success Response:
+{
+    "status": "success",
+    "data": {
+        "user_id": 1,
+        "user_name": "Parth Arora",
+        "user_image": "https://s3.myfileuploads/abc.jpg"
+    }
+}
+
+Sample Failure Response:
+{
+    "status": "failed",
+    "reason": "User doesn't exist!"
+}
+
+2. Get User's Posts
+Request:
+/posts/read/:userId
+
+Method: GET
+
+Sample Request:
+localhost:7777/posts/read/1
+
+Sample Success Response:
+{
+    "status": "success",
+    "data": [
+        {
+            "post_id": 1,
+            "post_image": "https://s3.myfileuploads/test.jpg",
+            "post_caption": "testuser3",
+            "post_createdAt": "2018-09-02T20:04:10.000Z",
+            "post_likes": 5,
+            "post_comments": 3
+        },
+        {
+            "post_id": 2,
+            "post_image": "https://s3.myfileuploads/test1.jpg",
+            "post_caption": "testuser2",
+            "post_createdAt": "2018-09-02T20:04:59.000Z",
+            "post_likes": 2,
+            "post_comments": 4
+        }
+    ]
+}
+
+Sample Failure Response:
+{
+    "status": "failed",
+    "reason": "User doesn't exist!"
+}
+
+
+
+
